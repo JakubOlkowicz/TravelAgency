@@ -1,13 +1,23 @@
 import React from 'react';
-import OrderSummary from 'OrderSummary.js';
+import PropTypes from 'prop-types';
+
+import OrderSummary from '../OderSummary/OrderSummary.js';
 import {Row, Col} from 'react-flexbox-grid';
 
-// eslint-disable-next-line no-empty-pattern
-const OrderForm = ({}) =>{
-  <Row>
-    <Col xs={12}>
-      <OrderSummary />
-    </Col>
-  </Row>;
-};
+class OrderForm extends React.Component{
+  static propTypes = {
+    tripCost: PropTypes.node,
+    options: PropTypes.any,
+  }
+  render(){
+    const {tripCost, options} = this.props;
+    return (
+      <Row>
+        <Col xs={12}>
+          <OrderSummary tripCost={tripCost} options={options} />
+        </Col>
+      </Row>
+    );
+  }
+}
 export default OrderForm;

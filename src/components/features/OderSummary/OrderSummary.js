@@ -1,10 +1,21 @@
 import React from 'react';
-import {styles} from 'OrderSummary.scss';
-// eslint-disable-next-line no-empty-pattern
-const OrderSummary = ({}) =>{
-  <h2 className={styles.component}>
-    <strong>$12,696</strong>
-  </h2>;
-};
+import PropTypes from 'prop-types';
+import { calculateTotal } from '../../../utils/calculateTotal';
+import { formatPrice } from '../../../utils/formatPrice';
+import {styles} from './OrderSummary.scss';
 
+class OrderSummary extends React.Component {
+  static propTypes = {
+    tripCost: PropTypes.node,
+    options: PropTypes.any,
+  }
+  render(){
+    const {tripCost, options} = this.props;
+    return (
+      <h2 className={styles.component}>
+        <strong>{calculateTotal(formatPrice(tripCost), options)}</strong>
+      </h2>
+    );
+  }
+}
 export default OrderSummary;
