@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { calculateTotal } from '../../../utils/calculateTotal';
 import { formatPrice } from '../../../utils/formatPrice';
-import {styles} from './OrderSummary.scss';
+import styles from './OrderSummary.scss';
 
 class OrderSummary extends React.Component {
   static propTypes = {
