@@ -6,7 +6,6 @@ import OptionText from './OptionText';
 import OptionDate from './OptionDate';
 
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styles from './OrderOption.scss';
 
 const optionTypes = {
