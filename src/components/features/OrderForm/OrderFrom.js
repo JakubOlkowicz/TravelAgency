@@ -5,8 +5,8 @@ import OrderSummary from '../OderSummary/OrderSummary.js';
 import {Row, Col} from 'react-flexbox-grid';
 import OrderOption from '../OderOption/OrderOption';
 import settings from '../../../data/settings';
-import calculateTotal from '../../../utils/calculateTotal';
-import formatPrice from '../../../utils/formatPrice';
+import {calculateTotal} from '../../../utils/calculateTotal';
+import {formatPrice} from '../../../utils/formatPrice';
 import Button from '../../common/Button/Button';
 
 const sendOrder = (options, tripCost, countryName, countryCode, countryId) => {
