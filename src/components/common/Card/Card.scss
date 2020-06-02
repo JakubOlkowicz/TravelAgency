@@ -4,28 +4,34 @@
   position: relative;
   padding: ($base-size * 5) 0;
   margin-bottom: ($base-size * 3);
-  background: $color-background;
-  &.small {
-    height: 200px;
-    margin-bottom: 0;
-    padding: ($base-size * 3) 0;
-  }
-  &.light {
-    background: $color-light;
-  }
+  background: lighten($color-dark, 70%);
+  height: 200px;
 }
-
 .image {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+.title {
+  position: absolute;
+    background: white;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-dark;
 }
 
 @media (max-width: 767px) {

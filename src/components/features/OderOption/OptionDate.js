@@ -17,7 +17,8 @@ class OptionDate extends React.Component{
       <div>
         <DatePicker
           selected={currentValue}
-          onChange={setOptionValue} />
+          onChange={setOptionValue} 
+          placeholderText='Preferred Date'/>
       </div>
     );
   }

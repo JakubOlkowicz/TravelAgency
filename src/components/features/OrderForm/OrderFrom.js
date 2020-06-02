@@ -60,7 +60,7 @@ class OrderForm extends React.Component{
     return (
       <Row>
         {pricing.map(price => (
-          <Col md={4} key={price.id}>
+          <Col md={12} key={price.id}>
             <OrderOption {...price} currentValue={options[price.id]} setOrderOption={setOrderOption}/>
           </Col>
         ))}

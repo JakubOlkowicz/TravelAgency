@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './OrderOption.scss';
 import ProtoTypes from 'prop-types';
 import { formatPrice } from '../../../utils/formatPrice';
-  
+
 const newValueSet = (currentValue, id, checked) => {
   if(checked){
     return [
@@ -14,7 +14,7 @@ const newValueSet = (currentValue, id, checked) => {
   }
 };
 
-const OptionCheckboxes = ({values, currentValue, setOptionValue}) => (
+const OrderOptionCheckboxes = ({values, currentValue, setOptionValue}) => (
   <div className={styles.checkboxes}>
 
     {values.map(value => (
@@ -25,16 +25,15 @@ const OptionCheckboxes = ({values, currentValue, setOptionValue}) => (
           onChange={event => setOptionValue(newValueSet(currentValue, value.id, event.currentTarget.checked))}
         />
         {value.name}{formatPrice(value.price)}
-        {console.log(value.id)}
-        {console.log(currentValue)}
       </label>
     ))}
   </div>
 );
 
-OptionCheckboxes.propTypes = {
+OrderOptionCheckboxes.propTypes = {
   values: ProtoTypes.array,
   currentValue: ProtoTypes.any,
   setOptionValue: ProtoTypes.any,
 };
-  
+
+export default OrderOptionCheckboxes;

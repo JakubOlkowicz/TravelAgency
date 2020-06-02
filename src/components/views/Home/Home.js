@@ -1,14 +1,34 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styles from './Home.scss';
 import Section from '../../layout/Section/Section';
 import Hero from '../../layout/Hero/Hero';
 import List from '../../common/List/List';
 import ListItem from '../../common/ListItem/ListItem';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import {default as Card} from '../../common/Card/Card';
 
 const Home = () => (
   <Section variant='has-hero'>
-    <Hero titleText='Let&apos;s explore.' imageSrc='http://uploads.kodilla.com/bootcamp/fer/13.router/image-1.jpg' />
+    <Hero titleText='Let&apos;s explore.' imageSrc='https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_1280.jpg' />
+    <Grid middle="md">
+      <Row md={12}>
+        <Col md={4}>
+          <Link to={`/countries`} >
+            <Card img='https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_1280.jpg' name='Countries' />
+          </Link>
+        </Col>
+        <Col md={4}>
+          <Link to={`/trips`} >
+            <Card img='https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058_1280.jpg' name='Trips' />
+          </Link>
+        </Col><Col md={4}>
+          <Link to={`/regions`} >
+            <Card img='https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_1280.jpg' name='Regions' />
+          </Link>
+        </Col>
+      </Row>
+    </Grid>
     <Grid>
       <Row middle="md">
         <Col md={6}>
