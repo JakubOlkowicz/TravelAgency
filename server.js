@@ -21,7 +21,7 @@ if (fs.existsSync(dbFileDist)){
   const server = jsonServer.create();
   const router = jsonServer.router(dbFileDist);
   const middlewares = jsonServer.defaults({
-    static: 'dist',
+    static: 'docs',
     // noCors: true,
   });
   const port = process.env.PORT || 3131;
